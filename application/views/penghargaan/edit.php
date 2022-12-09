@@ -33,7 +33,7 @@ $p1 = $penghargaanInfo->p1;
                                 <div class="col-md-12"> 
                                     <div class="form-group">
                                         <label for="penghargaan">Penghargaan</label>
-                                        <img src="../../../puskesmas/img/blog/<?=$penghargaan?>" width="100px">
+                                        <img src="<?php echo base_url(); ?>../../../public_html/img/blog/<?=$penghargaan?>" width="100px">
                                         <input type="file" class="form-control" id="penghargaan" name="img">
                                         <input type="hidden" value="<?php echo $taskId; ?>" name="taskId" maxlength="256" />
                                     </div>

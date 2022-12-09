@@ -77,7 +77,7 @@
                         {
                     ?>
                     <tr>
-                        <td><img src="../../puskesmas/img/blog/<?=$record->latar?>" width="100px"></td>
+                        <td><img src="<?php echo base_url(); ?>../../public_html/img/blog/<?=$record->latar?>" width="100px"></td>
                         <td><?php echo $record->tgl ?></td>
                         <td><?php echo $record->judul ?></td>
                         <td><?php echo $record->deskripsi ?></td>

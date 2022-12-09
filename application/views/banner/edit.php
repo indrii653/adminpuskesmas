@@ -59,7 +59,7 @@ $img = $bannerInfo->img;
                                 <div class="col-md-12"> 
                                     <div class="form-group">
                                         <label for="description">Gambar</label>
-                                        <img src="../../../puskesmas/img/<?=$img?>" width="100px">
+                                        <img src="../../../public_html/img/<?=$img?>" width="100px">
                                         <input type="file" class="form-control" id="gambar" name="img">
                                     </div>
                                 </div>

@@ -46,7 +46,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Banner List</h3>
+                    <h3 class="box-title"></h3>
                     <div class="box-tools">
                         <form action="<?php echo base_url() ?>banner/bannerListing" method="POST" id="searchList">
                         </form>
@@ -71,7 +71,7 @@
                         <td><?php echo $record->h1 ?></td>
                         <td><?php echo $record->h5 ?></td>
                         <td><?php echo $record->p ?></td>
-                        <td><img src="../../public_html/img/<?=$record->img?>" width="100px"></td>
+                        <td><img src="<?php echo base_url(); ?>../../public_html/img/<?=$record->img?>" width="100px"></td>
                         <td class="text-center">
                             <a class="btn btn-sm btn-info" href="<?php echo base_url().'banner/edit/'.$record->id; ?>" title="Edit"><i class="fa fa-pencil"></i></a>
                         </td>

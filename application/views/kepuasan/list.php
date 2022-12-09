@@ -74,7 +74,7 @@
                         {
                     ?>
                     <tr>
-                        <td><img src="../../puskesmas/img/blog/<?=$record->puas?>" width="100px"></td>
+                        <td><img src="<?php echo base_url(); ?>../../public_html/img/blog/<?=$record->puas?>" width="100px"></td>
                         <td class="text-center">
                             <a class="btn btn-sm btn-info" href="<?php echo base_url().'kepuasan/edit/'.$record->id; ?>" title="Edit"><i class="fa fa-pencil"></i></a>
                         </td>

@@ -32,7 +32,7 @@ $banner2 = $pengaduanInfo->banner2;
                                 <div class="col-md-12"> 
                                     <div class="form-group">
                                         <label for="b1">Banner Pertama</label>
-                                        <img src="../../../puskesmas/img/<?=$banner1?>" width="100px">
+                                        <img src="<?php echo base_url(); ?>../../../public_html/img/<?=$banner1?>" width="100px">
                                         <input type="file" class="form-control" id="pengaduan" name="img">
                                         <input type="hidden" value="<?php echo $taskId; ?>" name="taskId" maxlength="256" />
                                     </div>
@@ -42,7 +42,7 @@ $banner2 = $pengaduanInfo->banner2;
                                 <div class="col-md-12"> 
                                     <div class="form-group">
                                         <label for="b2">Banner Kedua</label>
-                                        <img src="../../../puskesmas/img/<?=$banner2?>" width="100px">
+                                        <img src="<?php echo base_url(); ?>../../../public_html/img/<?=$banner2?>" width="100px">
                                         <input type="file" class="form-control" id="pengaduan" name="img">
                                     </div>
                                 </div>

@@ -147,9 +147,9 @@ class Banner extends BaseController
             $this->load->library('form_validation');
             
                 $taskId = $this->input->post('taskId');
-                $config['upload_path']          = './../puskesmas/img';
+                $config['upload_path']          = './../public_html/img';
                 $config['allowed_types']        = 'gif|jpg|jpeg|png';
-                $config['file_name']            = 'banner';
+                $config['file_name']            = md5(date('Y-m-d H:i:s:u'));
                 $config['overwrite']            = true;
                 $config['max_size']             = 1024; // 1MB
 

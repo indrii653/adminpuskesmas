@@ -101,45 +101,6 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li>
-              <a href="<?php echo base_url(); ?>dashboard">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span></i>
-              </a>
-            </li>
-            <?php
-            if($is_admin == 1)
-            {
-            ?>
-            <li>
-              <a href="<?php echo base_url(); ?>userListing">
-                <i class="fa fa-users"></i>
-                <span>Users</span>
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo base_url(); ?>roles/roleListing">
-                <i class="fa fa-user-circle-o " aria-hidden="true"></i>
-                <span>Roles</span>
-              </a>
-            </li>
-            <?php
-            }
-            ?>
-            <?php
-            if($is_admin == 1 ||
-                (array_key_exists('Booking', $access_info) 
-                && ($access_info['Booking']['list'] == 1 || $access_info['Booking']['total_access'] == 1)))
-            {
-              ?>
-            <li>
-              <a href="<?php echo base_url(); ?>booking">
-                <i class="fa fa-anchor"></i>
-                <span>Booking</span>
-              </a>
-            </li>
-              <?php
-            }
-            ?>
             <?php
             if($is_admin == 1 ||
                 (array_key_exists('Task', $access_info) 
@@ -198,12 +159,6 @@
               <a href="<?php echo base_url(); ?>blog">
                 <i class="fa fa-tasks"></i>
                 <span>Blog</span>
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo base_url(); ?>berita">
-                <i class="fa fa-tasks"></i>
-                <span>Berita</span>
               </a>
             </li>
             <li>

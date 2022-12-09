@@ -31,7 +31,7 @@ $maklumat = $maklumatInfo->maklumat;
                                 <div class="col-md-12"> 
                                     <div class="form-group">
                                         <label for="description">Maklumat Pelayanan</label>
-                                        <img src="../../../puskesmas/img/<?=$maklumat?>" width="100px">
+                                        <img src="<?php echo base_url(); ?>../../../public_html/img/<?=$maklumat?>" width="100px">
                                         <input type="file" class="form-control" id="gambar" name="img">
                                         <input type="hidden" value="<?php echo $taskId; ?>" name="taskId" maxlength="256" />
                                     </div>

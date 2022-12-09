@@ -34,7 +34,7 @@ $deskripsi = $zonaInfo->deskripsi;
                                 <div class="col-md-12"> 
                                     <div class="form-group">
                                         <label for="latar">Gambar</label>
-                                        <img src="../../../puskesmas/img/blog/<?=$latar?>" width="100px">
+                                        <img src="<?php echo base_url(); ?>../../../public_html/img/blog/<?=$latar?>" width="100px">
                                         <input type="file" class="form-control" id="latar" name="latar">
                                     </div>
                                 </div>

@@ -89,17 +89,45 @@ class Kepuasan extends BaseController
         else
         { 
            
-            $kepuasanInfo = array('puas'=>$namafile,'createdBy'=>$this->vendorId, 'createdDtm'=>date('Y-m-d H:i:s'));
-            $this->load->model('kepuasan_model');
-            $result = $this->k->addNewkepuasan($kepuasanInfo);
-
-            if($result > 0) {
-                $this->session->set_flashdata('success', 'New Kepuasan created successfully');
-            } else {
-                $this->session->set_flashdata('error', 'Kepuasan creation failed');
-            }
+            $this->load->library('form_validation');
             
-            redirect('Kepuasan/KepuasanListing');}
+                $taskId = $this->input->post('taskId');
+                $config['upload_path']          = './../public_html/img';
+                $config['allowed_types']        = 'gif|jpg|jpeg|png';
+                $config['file_name']            = md5(date('Y-m-d H:i:s:u'));
+                $config['overwrite']            = true;
+                $config['max_size']             = 1024; // 1MB
+
+                $this->load->library('upload', $config);                
+                $this->upload->initialize($config);
+
+                $data['error'] = $this->upload->display_errors();
+
+                if (!$this->upload->do_upload('img')) {
+                    // $ambilnama=$this->k->getkepuasanInfo($taskId);                 
+                    // $namafile = $ambilnama->img;
+                    echo $this->upload->display_errors();
+                } else {
+                    $uploaded_data = $this->upload->data();
+                    $namafile = $uploaded_data['file_name'];
+                }
+
+                $kepuasanInfo = array('puas'=>$namafile,'updatedBy'=>$this->vendorId, 'updatedDtm'=>date('Y-m-d H:i:s'));
+                
+                $result = $this->k->addNewkepuasan($kepuasanInfo, $taskId);
+                
+                if($result == true)
+                {
+                    $this->session->set_flashdata('success', 'Kepuasan updated successfully');
+                    // $this->session->set_flashdata('success', $this->upload->display_errors().$config['upload_path']);
+                }
+                else
+                {
+                    $this->session->set_flashdata('error', 'Kepuasan updation failed');
+                }
+                
+                redirect('kepuasan/kepuasanListing');
+        }
     }
 
     
@@ -143,7 +171,7 @@ class Kepuasan extends BaseController
             $this->load->library('form_validation');
             
                 $taskId = $this->input->post('taskId');
-                $config['upload_path']          = './../puskesmas/img';
+                $config['upload_path']          = './../public_html/img';
                 $config['allowed_types']        = 'gif|jpg|jpeg|png';
                 $config['file_name']            = md5(date('Y-m-d H:i:s:u'));
                 $config['overwrite']            = true;

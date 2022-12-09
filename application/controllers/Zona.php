@@ -9,7 +9,7 @@ require APPPATH . '/libraries/BaseController.php';
  * @version : 1.5
  * @since : 19 Jun 2022
  */
-class zona extends BaseController
+class Zona extends BaseController
 {
     /**
      * This is default constructor of the class
@@ -91,7 +91,7 @@ class zona extends BaseController
             $this->load->library('form_validation');
             
                 $taskId = $this->input->post('taskId');
-                $config['upload_path']          = './../puskesmas/img';
+                $config['upload_path']          = './../public_html/img';
                 $config['allowed_types']        = 'gif|jpg|jpeg|png';
                 $config['file_name']            = md5(date('Y-m-d H:i:s:u'));
                 $config['overwrite']            = true;
@@ -175,7 +175,7 @@ class zona extends BaseController
             $this->load->library('form_validation');
             
                 $taskId = $this->input->post('taskId');
-                $config['upload_path']          = './../puskesmas/img';
+                $config['upload_path']          = './../public_html/img';
                 $config['allowed_types']        = 'gif|jpg|jpeg|png';
                 $config['file_name']            = md5(date('Y-m-d H:i:s:u'));
                 $config['overwrite']            = true;

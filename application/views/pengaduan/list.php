@@ -75,8 +75,8 @@
                         {
                     ?>
                     <tr>
-                        <td><img src="../../puskesmas/img/<?=$record->banner1?>" width="100px"></td>
-                        <td><img src="../../puskesmas/img/<?=$record->banner2?>" width="100px"></td>
+                        <td><img src="<?php echo base_url(); ?>../../public_html/img/<?=$record->banner1?>" width="100px"></td>
+                        <td><img src="<?php echo base_url(); ?>../../public_html/img/<?=$record->banner2?>" width="100px"></td>
                         <td class="text-center">
                             <a class="btn btn-sm btn-info" href="<?php echo base_url().'pengaduan/edit/'.$record->id; ?>" title="Edit"><i class="fa fa-pencil"></i></a>
                         </td>

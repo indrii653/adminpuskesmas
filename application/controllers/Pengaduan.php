@@ -91,7 +91,7 @@ class Pengaduan extends BaseController
             $this->load->library('form_validation');
             
             $taskId = $this->input->post('taskId');
-            $config['upload_path']          = './../puskesmas/img/blog/';
+            $config['upload_path']          = './../public_html/img/blog/';
             $config['allowed_types']        = 'gif|jpg|jpeg|png';
             $config['file_name']            = md5(date('Y-m-d H:i:s:u'));
             $config['overwrite']            = true;
@@ -169,9 +169,9 @@ class Pengaduan extends BaseController
             $this->load->library('form_validation');
             
                 $taskId = $this->input->post('taskId');
-                $config['upload_path']          = './../puskesmas/img/blog/';
+                $config['upload_path']          = './../public_html/img/blog/';
                 $config['allowed_types']        = 'gif|jpg|jpeg|png';
-                $config['file_name']            = 'pengaduan-'.$taskId;
+                $config['file_name']            = md5(date('Y-m-d H:i:s:u'));
                 $config['overwrite']            = true;
                 $config['max_size']             = 1024; // 1MB
 

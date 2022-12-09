@@ -76,7 +76,7 @@
                         {
                     ?>
                     <tr>
-                        <td><img src="../../puskesmas/img/<?=$record->foto?>" width="100px"></td>
+                        <td><img src="<?php echo base_url(); ?>../../public_html/img/<?=$record->foto?>" width="100px"></td>
                         <td><?php echo $record->judul ?></td>
                         <td><?php echo $record->p1 ?></td>
                         <td class="text-center">

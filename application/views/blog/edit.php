@@ -33,7 +33,7 @@ $p1 = $blogInfo->p1;
                                 <div class="col-md-12"> 
                                     <div class="form-group">
                                         <label for="foto">Gambar</label>
-                                        <img src="../../../puskesmas/img/<?=$foto?>" width="100px">
+                                        <img src="<?php echo base_url(); ?>../../../public_html/img/<?=$foto?>" width="100px">
                                         <input type="file" class="form-control" id="foto" name="img">
                                     </div>
                                 </div>
